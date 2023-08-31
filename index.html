@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
-<body onload="document.getElementById('boton').click();">
-<p>Click the button".</p>
-<input type="text" name="demo" id="demo" value="">
-<button value="button" id="boton"
-		onclick="let a=document.getElementById('demo').value
-        	     alert('Entrando botoncito');"
-        >Click me</button>
+<script>
+	function myFunction() {
+	   const date = new Date();
+		console.log("Page is loaded: "+date);
+	}
+</script> 
+<body onload="myFunction()">
+
 </body>
 </html>
