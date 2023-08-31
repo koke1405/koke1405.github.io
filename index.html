@@ -1,10 +1,38 @@
 <!DOCTYPE html>
 <html>
 <script>
-	function myFunction() {
-	   const date = new Date();
-		console.log("Page is loaded: "+date);
+ function myFunction() {
+	console.log("entrando")
+		
+	let element3 = document.querySelector(`[id*="Checktest__FLEX_EMPTY::content"]`);
+
+	console.log(element3.checked);
+	let lista=document.querySelector(`[id*="Listatestdemo__FLEX_EMPTY"]`);
+
+	let listaContent=lista.querySelector(`[id*="Listatestdemo__FLEX_EMPTY::content"]`);
+
+
+	if(element3.checked==false){
+		
+		lista.style.display = "none";
+		console.log("Entrando if ******");
 	}
+
+	element3.addEventListener('change', function() {
+		
+	  if (this.checked) {
+		 
+		 lista.style.display = "";
+         listaContent.value = "";
+		 console.log("Entrando check1: "+listaContent.value);
+	  } else {
+		lista.style.display = "none";
+        listaContent.value = "NA";
+		console.log("Entrando check2: "+listaContent.value);
+	  }
+	});
+	
+}
 </script> 
 <body onload="myFunction()">
 
